@@ -1,4 +1,4 @@
-import type { Profile } from '~/types/profile'
+import type { Profile } from '../types/profile'
 
 export function getSiteTitle(profile: Profile): string {
   return `${profile.name.ko} · ${profile.name.en}`

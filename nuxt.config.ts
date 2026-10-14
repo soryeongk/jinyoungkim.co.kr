@@ -6,13 +6,9 @@ const description = getSiteDescription(profile)
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2026-10-01',
-  devtools: { enabled: true },
+  modules: ['@nuxt/eslint'],
 
-  css: [
-    'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css',
-    '~/assets/css/base.css',
-  ],
+  devtools: { enabled: true },
 
   app: {
     head: {
@@ -33,17 +29,29 @@ export default defineNuxtConfig({
     },
   },
 
+  css: [
+    'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css',
+    '~/assets/css/base.css',
+  ],
+
   runtimeConfig: {
     public: {
       // NUXT_PUBLIC_SITE_URL 환경 변수로 덮어쓴다. OG 이미지/URL의 절대 경로 기준.
       siteUrl: 'https://jinyoungkim.co.kr',
     },
   },
+  compatibilityDate: '2026-10-01',
 
   nitro: {
     prerender: {
       routes: ['/'],
       crawlLinks: false,
+    },
+  },
+
+  eslint: {
+    config: {
+      stylistic: true,
     },
   },
 })

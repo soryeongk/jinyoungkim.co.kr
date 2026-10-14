@@ -1,4 +1,4 @@
-import type { Profile } from '~/types/profile'
+import type { Profile } from '../types/profile'
 
 // 사이트에 표시되는 콘텐츠의 단일 소스. 값 수정은 이 파일에서만 한다.
 export const profile: Profile = {
