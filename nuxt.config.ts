@@ -2,4 +2,8 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-01',
   devtools: { enabled: true },
+  css: [
+    'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css',
+    '~/assets/css/base.css',
+  ],
 })
