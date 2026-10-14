@@ -37,15 +37,15 @@ pnpm dev           # http://localhost:3000
 
 | 파일 | 규격 | 현재 상태 |
 |---|---|---|
-| `public/images/profile.webp` | 320×320 WebP (표시 160px의 2배) | ⚠️ 임시 회색 이미지 |
+| `public/images/profile.webp` | 1080×1080 WebP (표시 160px) | 실제 사진 |
 | `public/og.jpg` | 1200×630 JPEG | ⚠️ 임시 단색 이미지 |
 | `public/favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | 32px / 180px | 임시 `JK` 모노그램 |
 
 사진 크기를 바꾸면 `profile.ts`의 `photo.width`/`height`도 함께 바꾼다.
 
 ```bash
-# 예: 원본 사진을 320px WebP로 변환 (macOS)
-sips -Z 320 original.jpg --out /tmp/profile.jpg
+# 예: 원본 사진을 1080px WebP로 변환 (macOS)
+sips -Z 1080 original.jpg --out /tmp/profile.jpg
 cwebp -q 82 /tmp/profile.jpg -o public/images/profile.webp
 ```
 

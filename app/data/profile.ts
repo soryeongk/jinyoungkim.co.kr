@@ -6,17 +6,16 @@ export const profile: Profile = {
     ko: '김진영',
     en: 'Jinyoung Kim',
   },
-  // TODO: 실제 연락용 이메일로 교체 (교체 전에는 단위 테스트가 실패한다)
-  email: 'TODO@example.com',
+  email: 'coltv.turn.j@gmail.com',
   instagram: {
     handle: 'jinyoungkim.official',
     url: 'https://www.instagram.com/jinyoungkim.official',
   },
-  // 표시 크기(160px)의 2배 해상도 WebP
+  // 원본 1080px WebP (표시는 160px, CSS로 축소)
   photo: {
     src: '/images/profile.webp',
     alt: '김진영 프로필 사진',
-    width: 320,
-    height: 320,
+    width: 1080,
+    height: 1080,
   },
 }
