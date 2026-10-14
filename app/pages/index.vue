@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { links } from '~/data/links'
 import { profile } from '~/data/profile'
 </script>
 
@@ -13,6 +14,7 @@ import { profile } from '~/data/profile'
         :email="profile.email"
         :instagram="profile.instagram"
       />
+      <FeaturedLinks :links="links" />
     </main>
     <AppFooter :name="profile.name.en" />
   </div>
