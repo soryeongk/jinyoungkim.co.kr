@@ -1,0 +1,11 @@
+// Cloudflare Workers 정적 에셋 배포 설정 (pnpm generate 결과물만 서빙, Worker 스크립트 없음)
+// https://developers.cloudflare.com/workers/static-assets/
+{
+  "name": "jinyoungkim-co-kr",
+  "compatibility_date": "2026-10-19",
+  "assets": {
+    "directory": "./.output/public",
+    // 없는 경로는 404.html을 404 상태 코드로 응답
+    "not_found_handling": "404-page"
+  }
+}

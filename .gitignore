@@ -24,3 +24,6 @@ blob-report
 .env
 .env.*
 !.env.example
+
+# Cloudflare
+.wrangler
