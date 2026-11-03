@@ -43,6 +43,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-10-01',
 
   nitro: {
+    // Cloudflare 빌드 환경에서는 cloudflare-module 프리셋이 자동 선택되어
+    // 서버 진입점(index.mjs)을 요구하는 wrangler 설정이 생성된다. 완전 정적 출력으로 고정한다.
+    preset: 'static',
     prerender: {
       routes: ['/'],
       crawlLinks: false,
